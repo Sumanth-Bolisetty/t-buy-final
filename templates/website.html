@@ -1,0 +1,134 @@
+<head>
+	<title>T-Buy</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	* {
+  		box-sizing: border-box;
+	 }
+	 body {
+  		font-family: Arial, Helvetica, sans-serif;
+  		margin: 0;
+	}
+    a {
+        color: black;
+        text-decoration: none;
+    }
+	.header {
+  		height: 15%;
+        padding: 20px;
+        text-align: center;
+  		color: Black;
+        border-bottom: solid black 1px;
+   	}
+	
+   	.row {  
+  		display: -ms-flexbox; 
+  		display: flex;
+  		-ms-flex-wrap: wrap; 
+ 		flex-wrap: wrap;
+	}
+	.side {
+  		background-color: #d2e4e4;
+        border: solid black 1px;
+        float: left;
+        width: 10%;
+        height: 85%;
+        text-align: center;
+	}
+	@media screen and (max-width: 700px) {
+  	.row {   
+    		flex-direction: column;
+  	}
+	}
+	.dropbtn {
+  		border:black 2px;
+		block-size: auto;
+	}
+    .btn {
+        outline: none;
+        border: none;
+		font-size: medium;
+        padding: 20px;
+        background-color: transparent;
+    }
+
+    .btn:hover {
+        background-color: #fff;
+    }
+
+    .card {
+        display: none;
+        width:max-content;
+        transform: translate(70%, 0%);
+        background-color: #fff;
+        padding: 10px;
+        border: solid 1px #000;
+    }
+    
+    .droplist_wrapper {
+        width: auto;
+    }
+
+    .droplist_wrapper:hover .card {
+        display: block;
+    }
+
+    .card {
+        background-color: #d2e4e4;
+        width: auto;
+    }
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>T-Buy</h1>
+	</div>
+    
+    <div class="dropbtn">
+        <div class="side">
+            <div class="droplist_wrapper">
+                <button class="btn">Men</button>
+                <div class="card">
+                    <div><a href="currenttrends?men-tshirts">T-shirts</a></div>
+			        <div><a href="currenttrends?men-shirts">Shirts</a></div>
+                    <div><a href="currenttrends?men-jeans">Jeans</a></div>
+                    <div><a href="currenttrends?men-trousers">Trousers</a></div>
+                    <div><a href="currenttrends?men-floaters">Floaters</a></div>
+                    <div><a href="currenttrends?men-shoes">Shoes</a></div>
+                </div>
+            </div>
+            <div class="droplist_wrapper">
+                <button class="btn">Women</button>
+                <div class="card">
+					<div><a href="currenttrends?women-dresses">Dresses</a></div>
+					<div><a href="currenttrends?women-shirts">Shirts</a></div>
+					<div><a href="currenttrends?women-sarees">Sarees</a></div>
+					<div><a href="currenttrends?women-kurtis">Kurtis</a></div>
+					<div><a href="currenttrends?women-skirts">Skirts</a></div>
+					<div><a href="currenttrends?women-sandals">Sandals</a></div>
+					<div><a href="currenttrends?women-shoes">Shoes</a></div>
+                </div>
+            </div>
+            <div class="droplist_wrapper">
+                <button class="btn">Kids</button>
+                <div class="card">
+					<div><a href="currenttrends?kids-boys-ethnic">Boys Ethnic Wear</a></div>
+					<div><a href="currenttrends?kids-boys-shirts">Boys Shirts</a></div>
+					<div><a href="currenttrends?kids-boys-tshirts">Boys T-Shirts</a></div>
+					<div><a href="currenttrends?baby-boys-clothing-sets">Baby Boys Clothing Sets</a></div>
+					<div><a href="currenttrends?kids-girls-ethnic">Girls Ethnic Wear</a></div>
+					<div><a href="currenttrends?kids-girls-dresses">Girls Dresses</a></div>
+					<div><a href="currenttrends?baby-girls-clothing-sets">Baby Girls Clothing Sets</a></div>
+                </div>
+            </div>
+        </div>
+        <div name="products-display" class="row">
+            <p>
+                Select a Category on Left panel to get Trending Products from E-Commerce Platforms
+            </p>
+        </div>
+    </div>
+
+
+</body>
+</html>

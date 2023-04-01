@@ -1,0 +1,125 @@
+<head>
+<title>T-Buy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<style>
+	* {
+  	box-sizing: border-box;
+	}
+	body {
+  		font-family: Arial, Helvetica, sans-serif;
+  		margin: 0;
+	}
+	.header {
+  		padding: 25px;
+  		text-align: center;
+  		color: Black;
+	}
+	.header h1 {
+  		font-size: 40px;
+	}
+	.row {  
+  		display: -ms-flexbox; 
+  		display: flex;
+  		-ms-flex-wrap: wrap; 
+  		flex-wrap: wrap;
+ 	}
+	@media screen and (max-width: 700px) {
+  	.row {   
+    	flex-direction: column;
+  	}
+	}
+	body {
+  		font-family: Arial, Helvetica, sans-serif;
+  		margin: 0;
+	}
+	html {
+  	      box-sizing: border-box;
+	}
+	*, *:before, *:after {
+ 		 box-sizing: inherit;
+	}
+                 .main {   
+  	-ms-flex: 100%; /* IE10 */
+ 	 flex: 100%;
+  	background-color: #d2e4e4;
+  	padding: 20px;
+	}
+	.column {
+		float: left;
+  		width: 20%;
+  		margin-bottom: 16px;
+  		padding: 8px;
+	}
+	.card {
+ 	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  	margin: 8px;
+  	background-color: white;
+	height: 500px;
+	}
+	.about-section {
+  		padding: 50px;
+  		text-align: center;
+  		background-color: #e4d2d2;
+  		color: white;
+                }
+	.container {
+  		padding: 0 16px;
+	}
+	.container::after, .row::after {
+  		content: "";
+  		clear: both;
+  		display: table;
+	}
+	.title {
+  	color: grey;
+	}
+	@media screen and (max-width: 650px) {
+  	.column {
+   	 width: 100%;
+   	 display: block;
+  	}
+	}
+	.centerimg {
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 70%;
+  		padding: 10px;
+		height: 60%;
+	}
+	text {
+  		font: 10px sans-serif;
+	}
+	button{
+  		font: 10px sans-serif;
+    	}
+</style>
+<body>
+    <div class="header">
+    	<h1>Fashion Trends</h1>
+    </div>
+    <div class="main">
+        <h2 style="text-align:center">CURRENT TRENDS LEADERBOARD</h2>
+
+		{% for product in products[:30] %}
+		<div class="column">
+			<div class="card">
+				<img src={{ product.image }} alt="TOPTREND"+{{ products.index(product)+1 }} class="centerimg">
+				<div class="container">
+				  <b><p class="title">{{ product.brand }}</p></b>
+				  <p class="title">{{ product.name }}</p>
+				  <p text-size="20px"> Price: {{ product.price }} </p>
+				  <div>
+					  <a href={{ product.link }}>Buy Now</a>
+				  </div>
+				  <p> {{ product.platform }} </p>
+			  	</div>
+		 	</div>
+	  	</div>
+		{% endfor %}
+		
+
+    </div>
+</body>
+</html>
