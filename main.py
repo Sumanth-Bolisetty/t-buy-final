@@ -1,5 +1,4 @@
 import flask
-import os
 from flask import  render_template, request
 import pandas as pd
 import requests
