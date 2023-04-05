@@ -3,4 +3,3 @@ flask
 pandas
 uvicorn
 requests
-os
